@@ -6,7 +6,7 @@ This repository is a private staging area for reviewer- and publication-ready pu
 
 This staging version contains the code scripts from the `_v2` figure-analysis directories. These scripts cover the analytical workflow described in the manuscript `Data and code availability` and `Statistical analysis` sections, including climate-data matching, thermal-time reconstruction, EDH/GDD calculation, effect-size analysis, mixed-effects modelling, subgroup analyses, statistical testing, and most scripted figure generation.
 
-This staging version now includes the Figure 1 public input and derived output tables, the Figure 2 main-panel model input and numerical outputs, the Figure 3 regionalized source-data extracts and supplementary-table CSV files, and the Extended Data Figure 1 plant-density package with Supplementary Table 4. The complete project-level `meta_data_v2.csv` is not included; figure workflows use minimum public input tables instead.
+This staging version now includes the Figure 1 public input and derived output tables, the Figure 2 main-panel model input and numerical outputs, the Figure 3 regionalized source-data extracts and supplementary-table CSV files, Extended Data Figure 1 with Supplementary Table 4, and the Extended Data Figure 2 nitrogen-strategy package. The complete project-level `meta_data_v2.csv` is not included; figure workflows use minimum public input tables instead.
 
 ## Statistical workflow covered by the scripts
 
@@ -202,6 +202,39 @@ Important Extended Data Figure 1 boundaries:
 - `Extended Data Figure2_v2/scripts/analyze_n_strategy_lnrr_and_yield.R`
 - `Extended Data Figure2_v2/scripts/analyze_n_strategy_aen.R`
 - `Extended Data Figure2_v2/scripts/analyze_n_strategy_env_contrasts_within_strategy.R`
+
+Public Extended Data Figure 2 inputs currently included:
+
+- `Extended Data Figure2_v2/input_data/Extended_Data_Figure2_n_strategy_model_input.csv`
+
+The full `meta_data_v2.csv` is not included. `Extended_Data_Figure2_n_strategy_model_input.csv` keeps only China/USA observations within the representative regional N-input window (`region_N_label == RN`) and the nitrogen-strategy classes used by the Extended Data Figure 2 scripts (`S`, `SV`, `SR`, `SVR`). The public scripts read this minimum input table directly.
+
+Public Extended Data Figure 2 Source Data extracts currently included:
+
+- `Extended Data Figure2_v2/output_data/Extended_Data_Figure2*.csv`
+
+The `Extended Data Figure 2` sheet in the manuscript Source Data workbook contains final panel-ready data for Extended Data Fig. 2. Some original block labels in that sheet still use legacy `Figure 5*` names; those labels are preserved only in the mapping table below for exact auditability and are not used as public file names.
+
+#### Extended Data Figure 2 Source Data mapping
+
+| Public file | Source Data sheet | Source Data block label | Rows x cols | Source |
+| --- | --- | --- | --- | --- |
+| `Extended_Data_Figure2_data_set.csv` | `Extended Data Figure 2` | `Figure 5 Selected Data set` | 1152 x 21 | Source Data block |
+| `Extended_Data_Figure2a_lnrr_china_usa_model_results.csv` | `Extended Data Figure 2` | `Figure 5a_China+USA` | 24 x 18 | Source Data block |
+| `Extended_Data_Figure2b_aen_china_usa_model_results.csv` | `Extended Data Figure 2` | `Figure 5b_China+USA` | 24 x 15 | Source Data block |
+| `Extended_Data_Figure2c_lnrr_china_model_results.csv` | `Extended Data Figure 2` | `Figure 5c_China` | 24 x 18 | Source Data block |
+| `Extended_Data_Figure2d_aen_china_model_results.csv` | `Extended Data Figure 2` | `Figure 5d_China` | 24 x 15 | Source Data block |
+| `Extended_Data_Figure2e_lnrr_usa_model_results.csv` | `Extended Data Figure 2` | `Figure 5e_USA` | 18 x 18 | Source Data block |
+| `Extended_Data_Figure2f_aen_usa_model_results.csv` | `Extended Data Figure 2` | `Figure 5f_USA` | 18 x 15 | Source Data block |
+| `Extended_Data_Figure2g_yield_china_usa_wilcoxon_tests.csv` | `Extended Data Figure 2` | `Figure 5g_China+USA` | 32 x 11 | Source Data block |
+| `Extended_Data_Figure2h_yield_china_wilcoxon_tests.csv` | `Extended Data Figure 2` | `Figure5h_China` | 32 x 12 | Source Data block |
+| `Extended_Data_Figure2i_yield_usa_wilcoxon_tests.csv` | `Extended Data Figure 2` | `Figure5i_USA` | 11 x 11 | Source Data block |
+
+Important Extended Data Figure 2 boundaries:
+
+- Figure image files (`*.pdf`, `*.ai`, `*.jpg`) are not included at this stage.
+- The latest `Supplemental Figure.docx` contains Supplementary Figure 1-5 only, so there is no separate Supplementary Figure 6/7 package for Extended Data Figure 2.
+- Extended Data Figure 2 uses model M6 from `Supplementary Table 1`; `Figure3_v2/supplementary_tables/Supplementary_Table1_model_specifications.csv` is already included in this staging repository.
 
 ## Not yet included
 

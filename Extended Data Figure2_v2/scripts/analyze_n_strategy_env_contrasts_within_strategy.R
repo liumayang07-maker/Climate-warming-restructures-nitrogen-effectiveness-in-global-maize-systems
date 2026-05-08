@@ -27,7 +27,7 @@ env_levels <- c("Normal", "PFR", "GFR")
 q_lo <- 0.05
 q_hi <- 0.95
 
-dat <- read.csv(file.path(input_dir, "meta_data_v2.csv"), stringsAsFactors = FALSE)
+dat <- read.csv(file.path(input_dir, "Extended_Data_Figure2_n_strategy_model_input.csv"), stringsAsFactors = FALSE)
 
 format_p <- function(p) {
   ifelse(is.na(p), NA_character_, ifelse(p < 0.001, "<0.001", sprintf("%.3f", p)))
