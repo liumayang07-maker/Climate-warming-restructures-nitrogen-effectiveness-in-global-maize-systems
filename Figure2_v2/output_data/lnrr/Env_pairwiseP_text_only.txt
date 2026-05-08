@@ -1,0 +1,4 @@
+Pairwise (Tukey):
+(Normal vs PFR: P=0.007)
+(Normal vs GFR: P=0.061)
+(PFR vs GFR: P=0.852)

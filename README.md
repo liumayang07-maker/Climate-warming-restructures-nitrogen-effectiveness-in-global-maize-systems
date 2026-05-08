@@ -6,7 +6,7 @@ This repository is a private staging area for reviewer- and publication-ready pu
 
 This staging version contains the code scripts from the `_v2` figure-analysis directories. These scripts cover the analytical workflow described in the manuscript `Data and code availability` and `Statistical analysis` sections, including climate-data matching, thermal-time reconstruction, EDH/GDD calculation, effect-size analysis, mixed-effects modelling, subgroup analyses, statistical testing, and most scripted figure generation.
 
-This staging version now includes the Figure 1 public input and derived output tables needed for the scripted Figure 1 workflows. The complete project-level `meta_data_v2.csv` is not included; the Figure 1 histogram workflow uses a minimal two-column table instead.
+This staging version now includes the Figure 1 public input and derived output tables needed for the scripted Figure 1 workflows, and the Figure 2 main-panel model input and numerical outputs. The complete project-level `meta_data_v2.csv` is not included; figure workflows use minimum public input tables instead.
 
 ## Statistical workflow covered by the scripts
 
@@ -66,6 +66,23 @@ Important boundaries:
 - `Figure2_v2/scripts/lnrr_unweighted_mixed_effects.R`
 - `Figure2_v2/scripts/aen_unweighted_mixed_effects.R`
 - `Figure2_v2/scripts/year_ge5_supplementary_effects.R`
+
+Public Figure 2 main-panel inputs and numerical outputs currently included:
+
+- `Figure2_v2/input_data/figure2_model_input.csv`
+- `Figure2_v2/output_data/lnrr/*.csv`
+- `Figure2_v2/output_data/lnrr/*.txt`
+- `Figure2_v2/output_data/aen/*.csv`
+- `Figure2_v2/output_data/aen/*.txt`
+
+The full `meta_data_v2.csv` is not included in this public-release staging repository. `figure2_model_input.csv` keeps only the row-level columns needed by the main Figure 2 lnRR and AEN mixed-effects scripts: `lnRR`, `AEN`, `Env_Type`, `reference_ID`, `site_year_ID`, `env_ID`, `EDH35_total`, `N_rate`, and `N_rate_cluster`.
+
+The manuscript Source Data workbook contains a `Figure 2` sheet with the final panel-ready data for Figure 2. The public CSV/TXT outputs in `output_data/lnrr/` and `output_data/aen/` are the script-generated numerical outputs used to trace the main Figure 2 panels, including the model data set, environment-level estimates, nitrogen-rate-cluster estimates, AIC model comparisons, pairwise contrasts, and QC summaries.
+
+Important Figure 2 boundaries:
+
+- `year_ge5_supplementary_effects.R` is retained as a script, but its input and `output_data/year_ge5/` results are not included in this Figure 2 main-panel package. They will be handled with the relevant supplementary figure materials.
+- Figure files (`*.pdf`, `*.ai`, `*.jpg`) are not included at this stage. If journal or reviewer requirements make them necessary, they can be screened and added separately or archived externally.
 
 ### Figure 3
 

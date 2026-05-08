@@ -18,7 +18,7 @@ input_dir <- file.path(root_dir, "input_data")
 out_dir <- file.path(root_dir, "output_data", "lnrr")
 if (!dir.exists(out_dir)) dir.create(out_dir, recursive = TRUE)
 
-dat <- read.csv(file.path(input_dir, "meta_data_v2.csv"), stringsAsFactors = FALSE)
+dat <- read.csv(file.path(input_dir, "figure2_model_input.csv"), stringsAsFactors = FALSE)
 
 ## -------------------------
 ## 1) Column mapping

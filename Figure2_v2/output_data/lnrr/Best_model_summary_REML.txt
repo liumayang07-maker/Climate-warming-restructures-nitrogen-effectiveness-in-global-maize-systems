@@ -1,0 +1,80 @@
+Best model: m3_ML 
+
+Linear mixed-effects model fit by REML
+  Data: dAIC 
+        AIC       BIC  logLik
+  -3529.679 -3415.076 1782.84
+
+Random effects:
+ Formula: ~1 | reference_ID
+        (Intercept)
+StdDev:   0.2412559
+
+ Formula: ~1 | site_year_ID %in% reference_ID
+        (Intercept)  Residual
+StdDev:   0.2131453 0.1172212
+
+Fixed effects:  lnRR ~ env_group * ns(Nc, df = 4) 
+                                  Value  Std.Error   DF   t-value p-value
+(Intercept)                   0.2298651 0.02581808 3466  8.903261  0.0000
+env_groupPFR                 -0.1346667 0.03576698 3466 -3.765111  0.0002
+env_groupGFR                 -0.1213407 0.03663002 3466 -3.312603  0.0009
+ns(Nc, df = 4)1               0.3317179 0.01547273 3466 21.438866  0.0000
+ns(Nc, df = 4)2               0.3415742 0.01998940 3466 17.087765  0.0000
+ns(Nc, df = 4)3               0.6126535 0.04006069 3466 15.293135  0.0000
+ns(Nc, df = 4)4               0.2002199 0.03593822 3466  5.571227  0.0000
+env_groupPFR:ns(Nc, df = 4)1  0.0572366 0.02696023 3466  2.123002  0.0338
+env_groupGFR:ns(Nc, df = 4)1  0.0223611 0.02631141 3466  0.849862  0.3955
+env_groupPFR:ns(Nc, df = 4)2 -0.0148011 0.03144691 3466 -0.470669  0.6379
+env_groupGFR:ns(Nc, df = 4)2  0.0389716 0.03609954 3466  1.079558  0.2804
+env_groupPFR:ns(Nc, df = 4)3  0.0571048 0.06922437 3466  0.824924  0.4095
+env_groupGFR:ns(Nc, df = 4)3  0.0807962 0.07913810 3466  1.020952  0.3073
+env_groupPFR:ns(Nc, df = 4)4 -0.0578621 0.07039414 3466 -0.821974  0.4111
+env_groupGFR:ns(Nc, df = 4)4 -0.0919271 0.11073546 3466 -0.830150  0.4065
+ Correlation: 
+                             (Intr) en_PFR en_GFR n(N,d=4)1 n(N,d=4)2 n(N,d=4)3 n(N,d=4)4 e_PFR:(N,d=4)1
+env_groupPFR                 -0.524                                                                     
+env_groupGFR                 -0.503  0.382                                                              
+ns(Nc, df = 4)1              -0.474  0.341  0.330                                                       
+ns(Nc, df = 4)2              -0.290  0.205  0.202  0.144                                                
+ns(Nc, df = 4)3              -0.504  0.358  0.353  0.635     0.470                                      
+ns(Nc, df = 4)4              -0.076  0.054  0.050  0.236    -0.213     0.445                            
+env_groupPFR:ns(Nc, df = 4)1  0.263 -0.652 -0.186 -0.571    -0.081    -0.362    -0.135                  
+env_groupGFR:ns(Nc, df = 4)1  0.273 -0.196 -0.577 -0.587    -0.084    -0.373    -0.138     0.336        
+env_groupPFR:ns(Nc, df = 4)2  0.178 -0.395 -0.125 -0.090    -0.633    -0.296     0.136     0.231        
+env_groupGFR:ns(Nc, df = 4)2  0.160 -0.111 -0.353 -0.079    -0.552    -0.260     0.117     0.045        
+env_groupPFR:ns(Nc, df = 4)3  0.281 -0.651 -0.201 -0.365    -0.270    -0.576    -0.257     0.741        
+env_groupGFR:ns(Nc, df = 4)3  0.252 -0.182 -0.526 -0.321    -0.237    -0.505    -0.223     0.183        
+env_groupPFR:ns(Nc, df = 4)4  0.035 -0.058 -0.027 -0.120     0.109    -0.227    -0.509     0.249        
+env_groupGFR:ns(Nc, df = 4)4  0.020 -0.019 -0.016 -0.076     0.070    -0.143    -0.321     0.044        
+                             e_GFR:(N,d=4)1 e_PFR:(N,d=4)2 e_GFR:(N,d=4)2 e_PFR:(N,d=4)3 e_GFR:(N,d=4)3 e_PFR:(N,d=4)4
+env_groupPFR                                                                                                          
+env_groupGFR                                                                                                          
+ns(Nc, df = 4)1                                                                                                       
+ns(Nc, df = 4)2                                                                                                       
+ns(Nc, df = 4)3                                                                                                       
+ns(Nc, df = 4)4                                                                                                       
+env_groupPFR:ns(Nc, df = 4)1                                                                                          
+env_groupGFR:ns(Nc, df = 4)1                                                                                          
+env_groupPFR:ns(Nc, df = 4)2  0.053                                                                                   
+env_groupGFR:ns(Nc, df = 4)2  0.140          0.351                                                                    
+env_groupPFR:ns(Nc, df = 4)3  0.215          0.372          0.149                                                     
+env_groupGFR:ns(Nc, df = 4)3  0.590          0.150          0.182          0.292                                      
+env_groupPFR:ns(Nc, df = 4)4  0.071         -0.423         -0.061          0.430          0.116                       
+env_groupGFR:ns(Nc, df = 4)4  0.169         -0.045         -0.466          0.084          0.615          0.167        
+
+Standardized Within-Group Residuals:
+         Min           Q1          Med           Q3          Max 
+-4.113166902 -0.457472201 -0.006184436  0.457051017  7.396118744 
+
+Number of Observations: 4317
+Number of Groups: 
+                  reference_ID site_year_ID %in% reference_ID 
+                           278                            837 
+
+--- Wald-type ANOVA (nlme::anova) ---
+                         numDF denDF  F-value p-value
+(Intercept)                  1  3466 801.5174  <.0001
+env_group                    2  3466   6.3352  0.0018
+ns(Nc, df = 4)               4  3466 435.5204  <.0001
+env_group:ns(Nc, df = 4)     8  3466   2.0477  0.0375

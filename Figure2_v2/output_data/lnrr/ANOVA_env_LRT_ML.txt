@@ -1,0 +1,3 @@
+                          Model df       AIC       BIC   logLik   Test  L.Ratio p-value
+update(m0, method = "ML")     1  4 -2211.563 -2186.082 1109.782                        
+update(m1, method = "ML")     2  6 -2217.713 -2179.491 1114.857 1 vs 2 10.14998  0.0063
