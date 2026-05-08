@@ -1,4 +1,4 @@
-﻿# =========================================================
+# =========================================================
 # 0) Packages & data
 # =========================================================
 suppressPackageStartupMessages({
@@ -26,7 +26,14 @@ output_dir <- file.path(root_dir, "output_data")
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 setwd(output_dir)
 
-dat <- read.csv(file.path(input_dir, "meta_data_v2.csv"), stringsAsFactors = FALSE)
+dat <- read.csv(file.path(input_dir, "Extended_Data_Figure1_density_model_input.csv"), stringsAsFactors = FALSE)
+if (!"plant_density_cluster" %in% names(dat) && "plant_density_3cluster" %in% names(dat)) {
+  dat$plant_density_cluster <- dat$plant_density_3cluster
+}
+if (!"plant_density_3cluster" %in% names(dat) && "plant_density_cluster" %in% names(dat)) {
+  dat$plant_density_3cluster <- dat$plant_density_cluster
+}
+
 
 subset_countries <- c("USA")
 output_prefix <- "usa"
@@ -54,7 +61,7 @@ col <- list(col_lnRR       <- "lnRR",
             col_N_S        <- "N_S",
             col_N_V        <- "N_V",
             col_N_R        <- "N_R",
-            col_plant_density <- "plant_density_3cluster",
+            col_plant_density <- "plant_density_cluster",
             col_HY_strategy2 <- "HY_strategy2",
             col_region_N_label <- "region_N_label"
 )

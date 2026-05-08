@@ -45,7 +45,14 @@ if (grepl("china_usa", script_name, ignore.case = TRUE)) {
 q_lo <- 0.05
 q_hi <- 0.95
 
-dat <- read.csv(file.path(input_dir, "meta_data_v2.csv"), stringsAsFactors = FALSE)
+dat <- read.csv(file.path(input_dir, "Extended_Data_Figure1_density_model_input.csv"), stringsAsFactors = FALSE)
+if (!"plant_density_cluster" %in% names(dat) && "plant_density_3cluster" %in% names(dat)) {
+  dat$plant_density_cluster <- dat$plant_density_3cluster
+}
+if (!"plant_density_3cluster" %in% names(dat) && "plant_density_cluster" %in% names(dat)) {
+  dat$plant_density_3cluster <- dat$plant_density_cluster
+}
+
 
 pick_col <- function(candidates) {
   hit <- candidates[candidates %in% names(dat)]
@@ -55,7 +62,7 @@ pick_col <- function(candidates) {
   hit[1]
 }
 
-col_plant_density <- pick_col(c("plant_density_3cluster", "plant_density_cluster"))
+col_plant_density <- pick_col(c("plant_density_cluster", "plant_density_3cluster"))
 
 prep_metric <- function(metric_col) {
   dat %>%

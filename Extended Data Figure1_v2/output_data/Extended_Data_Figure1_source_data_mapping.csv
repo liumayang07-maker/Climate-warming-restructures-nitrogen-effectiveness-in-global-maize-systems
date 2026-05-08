@@ -1,0 +1,11 @@
+public_file,source_data_sheet,source_data_block_label,rows,columns,source
+Extended_Data_Figure1_data_set.csv,Extended Data Figure 1,Figure 4 Selected Data set,1066,19,Source Data block
+Extended_Data_Figure1a_lnrr_china_usa_model_results.csv,Extended Data Figure 1,Figure 4a_China+USA,27,16,Source Data block
+Extended_Data_Figure1b_aen_china_usa_model_results.csv,Extended Data Figure 1,Figure4b_China+USA,27,16,Source Data block
+Extended_Data_Figure1g_yield_china_usa_wilcoxon_tests.csv,Extended Data Figure 1,Figure4g_China+USA,20,10,Source Data block
+Extended_Data_Figure1c_lnrr_china_model_results.csv,Extended Data Figure 1,Figure4c_China,27,16,Source Data block
+Extended_Data_Figure1d_aen_china_model_results.csv,Extended Data Figure 1,Figure4d_China,27,15,Source Data block
+Extended_Data_Figure1h_yield_china_wilcoxon_tests.csv,Extended Data Figure 1,Figure4h_China,20,11,Source Data block
+Extended_Data_Figure1e_lnrr_usa_model_results.csv,Extended Data Figure 1,Figure4e_USA,27,16,Source Data block
+Extended_Data_Figure1f_aen_usa_model_results.csv,Extended Data Figure 1,Figure4f_USA,27,16,Source Data block
+Extended_Data_Figure1i_yield_usa_wilcoxon_tests.csv,Extended Data Figure 1,Figure4i_USA,20,9,Source Data block

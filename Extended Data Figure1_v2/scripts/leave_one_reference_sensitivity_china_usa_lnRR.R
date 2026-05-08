@@ -31,11 +31,18 @@ format_p <- function(p) {
   ifelse(is.na(p), NA_character_, ifelse(p < 0.001, "<0.001", sprintf("%.3f", p)))
 }
 
-dat <- read.csv(file.path(input_dir, "meta_data_v2.csv"), stringsAsFactors = FALSE)
-col_plant_density <- if ("plant_density_3cluster" %in% names(dat)) {
-  "plant_density_3cluster"
-} else {
+dat <- read.csv(file.path(input_dir, "Extended_Data_Figure1_density_model_input.csv"), stringsAsFactors = FALSE)
+if (!"plant_density_cluster" %in% names(dat) && "plant_density_3cluster" %in% names(dat)) {
+  dat$plant_density_cluster <- dat$plant_density_3cluster
+}
+if (!"plant_density_3cluster" %in% names(dat) && "plant_density_cluster" %in% names(dat)) {
+  dat$plant_density_3cluster <- dat$plant_density_cluster
+}
+
+col_plant_density <- if ("plant_density_cluster" %in% names(dat)) {
   "plant_density_cluster"
+} else {
+  "plant_density_3cluster"
 }
 
 prep_lnrr <- function(dat) {

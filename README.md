@@ -6,7 +6,7 @@ This repository is a private staging area for reviewer- and publication-ready pu
 
 This staging version contains the code scripts from the `_v2` figure-analysis directories. These scripts cover the analytical workflow described in the manuscript `Data and code availability` and `Statistical analysis` sections, including climate-data matching, thermal-time reconstruction, EDH/GDD calculation, effect-size analysis, mixed-effects modelling, subgroup analyses, statistical testing, and most scripted figure generation.
 
-This staging version now includes the Figure 1 public input and derived output tables, the Figure 2 main-panel model input and numerical outputs, and the Figure 3 regionalized source-data extracts and supplementary-table CSV files. The complete project-level `meta_data_v2.csv` is not included; figure workflows use minimum public input tables instead.
+This staging version now includes the Figure 1 public input and derived output tables, the Figure 2 main-panel model input and numerical outputs, the Figure 3 regionalized source-data extracts and supplementary-table CSV files, and the Extended Data Figure 1 plant-density package with Supplementary Table 4. The complete project-level `meta_data_v2.csv` is not included; figure workflows use minimum public input tables instead.
 
 ## Statistical workflow covered by the scripts
 
@@ -162,6 +162,41 @@ Important Figure 3 boundaries:
 - `Extended Data Figure1_v2/scripts/analyze_density_env_contrasts_china_usa.R`
 - `Extended Data Figure1_v2/scripts/leave_one_reference_sensitivity_china_usa_lnRR.R`
 
+Public Extended Data Figure 1 inputs currently included:
+
+- `Extended Data Figure1_v2/input_data/Extended_Data_Figure1_density_model_input.csv`
+
+The full `meta_data_v2.csv` is not included. `Extended_Data_Figure1_density_model_input.csv` keeps only the China/USA observations within the representative regional N-input window (`region_N_label == RN`) and the columns required by the plant-density mixed-effects, yield-summary and sensitivity scripts. The public scripts read this minimum input table and use `plant_density_cluster` as the primary planting-density class, while retaining compatibility with the older `plant_density_3cluster` column name if needed.
+
+Public Extended Data Figure 1 Source Data extracts currently included:
+
+- `Extended Data Figure1_v2/output_data/Extended_Data_Figure1*.csv`
+- `Extended Data Figure1_v2/supplementary_tables/Supplementary_Table4_plant_density_windows.csv`
+
+The `Extended Data Figure 1` sheet in the manuscript Source Data workbook contains final panel-ready data for Extended Data Fig. 1. Some original block labels in that sheet still use legacy `Figure4*` names; those labels are preserved only in the mapping table below for exact auditability and are not used as public file names.
+
+#### Extended Data Figure 1 Source Data mapping
+
+| Public file | Source Data sheet | Source Data block label | Rows x cols | Source |
+| --- | --- | --- | --- | --- |
+| `Extended_Data_Figure1_data_set.csv` | `Extended Data Figure 1` | `Figure 4 Selected Data set` | 1066 x 19 | Source Data block |
+| `Extended_Data_Figure1a_lnrr_china_usa_model_results.csv` | `Extended Data Figure 1` | `Figure 4a_China+USA` | 27 x 16 | Source Data block |
+| `Extended_Data_Figure1b_aen_china_usa_model_results.csv` | `Extended Data Figure 1` | `Figure4b_China+USA` | 27 x 16 | Source Data block |
+| `Extended_Data_Figure1c_lnrr_china_model_results.csv` | `Extended Data Figure 1` | `Figure4c_China` | 27 x 16 | Source Data block |
+| `Extended_Data_Figure1d_aen_china_model_results.csv` | `Extended Data Figure 1` | `Figure4d_China` | 27 x 15 | Source Data block |
+| `Extended_Data_Figure1e_lnrr_usa_model_results.csv` | `Extended Data Figure 1` | `Figure4e_USA` | 27 x 16 | Source Data block |
+| `Extended_Data_Figure1f_aen_usa_model_results.csv` | `Extended Data Figure 1` | `Figure4f_USA` | 27 x 16 | Source Data block |
+| `Extended_Data_Figure1g_yield_china_usa_wilcoxon_tests.csv` | `Extended Data Figure 1` | `Figure4g_China+USA` | 20 x 10 | Source Data block |
+| `Extended_Data_Figure1h_yield_china_wilcoxon_tests.csv` | `Extended Data Figure 1` | `Figure4h_China` | 20 x 11 | Source Data block |
+| `Extended_Data_Figure1i_yield_usa_wilcoxon_tests.csv` | `Extended Data Figure 1` | `Figure4i_USA` | 20 x 9 | Source Data block |
+| `Supplementary_Table4_plant_density_windows.csv` | `Supplemental Table.docx` | `Supplementary Table 4` | 15 x 5 | Latest supplementary table |
+
+Important Extended Data Figure 1 boundaries:
+
+- Figure image files (`*.pdf`, `*.ai`, `*.jpg`) are not included at this stage.
+- Older local files named `Supplementary_Figure6_China.*` and `Supplementary_Figure7_USA.*` are not included because the latest `Supplemental Figure.docx` currently contains Supplementary Figure 1-5 only.
+- Large sensitivity output tables are not staged here unless separately required for reviewer QA.
+
 ### Extended Data Figure 2
 
 - `Extended Data Figure2_v2/scripts/analyze_n_strategy_lnrr_and_yield.R`
@@ -171,7 +206,7 @@ Important Figure 3 boundaries:
 ## Not yet included
 
 - Full Source Data workbook for Figure 2-4, Extended Data Figure 1-2 and Supplementary Figure 2-5
-- Supplementary Table 4 and later figure-specific table packages not yet staged
+- Later figure-specific supplementary-table packages not yet staged
 - Final figure files and editable figure layouts
 - Draft manuscript, cover letter and internal review files
 - External raw/local-hour ERA5 files and local credentials for Copernicus CDS access
