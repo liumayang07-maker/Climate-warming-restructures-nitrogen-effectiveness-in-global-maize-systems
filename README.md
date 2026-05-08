@@ -6,7 +6,7 @@ This repository is a private staging area for reviewer- and publication-ready pu
 
 This staging version contains the code scripts from the `_v2` figure-analysis directories. These scripts cover the analytical workflow described in the manuscript `Data and code availability` and `Statistical analysis` sections, including climate-data matching, thermal-time reconstruction, EDH/GDD calculation, effect-size analysis, mixed-effects modelling, subgroup analyses, statistical testing, and most scripted figure generation.
 
-This staging version now includes the Figure 1 public input and derived output tables needed for the scripted Figure 1 workflows, and the Figure 2 main-panel model input and numerical outputs. The complete project-level `meta_data_v2.csv` is not included; figure workflows use minimum public input tables instead.
+This staging version now includes the Figure 1 public input and derived output tables, the Figure 2 main-panel model input and numerical outputs, and the Figure 3 regionalized source-data extracts and supplementary-table CSV files. The complete project-level `meta_data_v2.csv` is not included; figure workflows use minimum public input tables instead.
 
 ## Statistical workflow covered by the scripts
 
@@ -91,6 +91,58 @@ Important Figure 2 boundaries:
 - `Figure3_v2/scripts/analyze_regional_lnrr_and_yield.R`
 - `Figure3_v2/scripts/analyze_regional_aen_and_yield.R`
 
+Public Figure 3 inputs currently included:
+
+- `Figure3_v2/input_data/Figure3_edh_stack_input.csv`
+- `Figure3_v2/input_data/Figure3_regional_model_input.csv`
+- `Figure3_v2/input_data/Figure3_regional_n_input_1990_2020.csv`
+- `Figure3_v2/input_data/Figure3_regional_n_input_2011_2020.csv`
+
+The full `meta_data_v2.csv` and `region_meta_data_v2.csv` are not included. The public input files keep only the minimum columns needed for the public Figure 3 scripts and for reviewer inspection of the regionalized workflow.
+
+Public Figure 3 and regional supplementary outputs currently included:
+
+- `Figure3_v2/output_data/Figure3*.csv`
+- `Figure3_v2/output_data/Supplementary_Figure3*.csv`
+- `Figure3_v2/output_data/Supplementary_Figure4*.csv`
+- `Figure3_v2/output_data/Supplementary_Figure5*.csv`
+- `Figure3_v2/supplementary_tables/Supplementary_Table1_model_specifications.csv`
+- `Figure3_v2/supplementary_tables/Supplementary_Table2_regional_observation_balance.csv`
+- `Figure3_v2/supplementary_tables/Supplementary_Table3_regional_conventional_n_input_windows.csv`
+
+The file names follow the current manuscript figure and table titles in `Figure.docx`, `Supplemental Figure.docx`, and `Supplemental Table.docx`. Historical internal output names from earlier scripts are not used as public file names. Some original Source Data block labels contain spelling errors such as `Fgiure`; those labels are retained only in the mapping below for auditability.
+
+#### Figure 3 Source Data mapping
+
+| Public file | Source Data sheet | Source Data block label | Rows x cols | Source |
+| --- | --- | --- | --- | --- |
+| `Figure3a_data_set.csv` | `Figure3` | `Figure3a_data set` | 110 x 14 | Source Data block |
+| `Figure3a_region_environment_counts.csv` | `Figure3` | `Figure3a` | 11 x 10 | Source Data block |
+| `Figure3b_edh_intensity_stack.csv` | `Figure3` | `Figure3b` | 77 x 4 | Source Data block / `plot_regional_edh_intensity_stack.R` |
+| `Figure3c_data_set.csv` | `Figure3` | `Figure3c` occurrence 1 | 4170 x 25 | Source Data block |
+| `Figure3c_model_results.csv` | `Figure3` | `Figure3c` occurrence 2 | 39 x 14 | Source Data block |
+| `Figure3d_yield_wilcoxon_tests.csv` | `Figure3` | `Figure3d` | 31 x 10 | Source Data block |
+| `Figure3e_data_set.csv` | `Figure3` | `Figure3e` occurrence 1 | 1601 x 25 | Source Data block |
+| `Figure3e_model_results.csv` | `Figure3` | `Figure3e` occurrence 2 | 39 x 14 | Source Data block |
+| `Figure3f_yield_wilcoxon_tests.csv` | `Figure3` | `Figure3f` | 31 x 10 | Source Data block |
+| `Supplementary_Figure3a_n_rate_all_observations.csv` | `Supplement Figure 3` | `Supplement Figure 3a` | 15 x 10 | Source Data block |
+| `Supplementary_Figure3b_n_rate_regionalized_dataset.csv` | `Supplement Figure 3` | `Supplement Fgiure 3b` | 31 x 10 | Source Data block |
+| `Supplementary_Figure3c_zero_n_yield_all_observations.csv` | `Supplement Figure 3` | `Supplement Fgiure 3c` | 15 x 10 | Source Data block |
+| `Supplementary_Figure3d_zero_n_yield_regionalized_dataset.csv` | `Supplement Figure 3` | `Supplement Fgiure 3d` | 31 x 10 | Source Data block |
+| `Supplementary_Figure4a_aen_all_observations_model_results.csv` | `Supplement Figure 4` | `Supplement Fgiure 4a` | 39 x 11 | Source Data block |
+| `Supplementary_Figure4b_aen_regionalized_dataset_model_results.csv` | `Supplement Figure 4` | `Supplement Fgiure 4b` | 39 x 11 | Source Data block |
+| `Supplementary_Figure5_data_set.csv` | `Supplement Figure 5` | `Supplement Fgiure 5_data_set` | 1164 x 21 | Source Data block |
+| `Supplementary_Figure5a_lnrr_china_usa_model_results.csv` | `Supplement Figure 5` | `Supplement Fgiure 5a` | 21 x 14 | Source Data block |
+| `Supplementary_Figure5b_aen_china_usa_model_results.csv` | `Supplement Figure 5` | `Supplement Fgiure 5b` | 21 x 14 | Source Data block |
+| `Supplementary_Figure5c_fertilized_yield_wilcoxon_tests.csv` | `Supplement Figure 5` | `Supplement Fgiure 5c` | 13 x 10 | Source Data block |
+| `Supplementary_Figure5d_zero_n_yield_wilcoxon_tests.csv` | `Supplement Figure 5` | `Supplement Fgiure 5d` | 13 x 10 | Source Data block |
+
+Important Figure 3 boundaries:
+
+- `Supplementary Table 4` is not included in this Figure 3 package because it belongs to the plant-density / Extended Data Figure 1 workflow.
+- `Supplementary Figure 2` is not included here because it is part of the thermal-progress heat-exposure workflow rather than the regionalized Figure 3 workflow.
+- Figure image files (`*.pdf`, `*.ai`, `*.jpg`) are not included at this stage. The public package provides the current Source Data-aligned CSV files and the scripts needed to inspect or regenerate the scripted components.
+
 ### Figure 4
 
 - `Figure4_v2/scripts/compare_adaptation_strategies_yield.R`
@@ -118,8 +170,8 @@ Important Figure 2 boundaries:
 
 ## Not yet included
 
-- Source Data file for Figure 2-4, Extended Data Figure 1-2 and Supplementary Figure 2-5
-- Supplementary Tables 1-4
+- Full Source Data workbook for Figure 2-4, Extended Data Figure 1-2 and Supplementary Figure 2-5
+- Supplementary Table 4 and later figure-specific table packages not yet staged
 - Final figure files and editable figure layouts
 - Draft manuscript, cover letter and internal review files
 - External raw/local-hour ERA5 files and local credentials for Copernicus CDS access

@@ -16,7 +16,7 @@ input_dir <- file.path(root_dir, "input_data")
 output_dir <- file.path(root_dir, "output_data")
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 setwd(output_dir)
-dat <- read.csv(file.path(input_dir, "meta_data_v2.csv"), stringsAsFactors = FALSE)
+dat <- read.csv(file.path(input_dir, "Figure3_edh_stack_input.csv"), stringsAsFactors = FALSE)
 
 # ---- column names ----
 col_lnRR       <- "lnRR"
@@ -90,7 +90,7 @@ edd_cols <- c(
 # Public-release note
 stopifnot(all(levels(prop_reg$EDH35_label) %in% names(edd_cols)))
 
-write.csv(prop_reg, "EDH_intensity_stack_Figure.csv")
+write.csv(prop_reg, "Figure3b_edh_intensity_stack.csv", row.names = FALSE)
 
 reg_n <- d_reg %>% count(region, name = "n_env")
 

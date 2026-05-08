@@ -25,7 +25,7 @@ input_dir <- file.path(root_dir, "input_data")
 output_dir <- file.path(root_dir, "output_data")
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 setwd(output_dir)
-dat <- read.csv(file.path(input_dir, "region_meta_data_v2.csv"), stringsAsFactors = FALSE)
+dat <- read.csv(file.path(input_dir, "Figure3_regional_model_input.csv"), stringsAsFactors = FALSE)
 
 # ---- column names ----
 col <- list(col_lnRR       <- "lnRR",
@@ -174,7 +174,7 @@ emm_df <- as.data.frame(emm0) %>%
   mutate(
     n_lab = paste0("n=", k)
   )
-write.csv(emm_df, "Data_Figure3E_1.csv")
+write.csv(emm_df, "Figure3e_model_estimates_from_script.csv")
 
 # Public-release note
 n_offset <- 0.06 * (max(emm_df$pct_upr, na.rm = TRUE) - min(emm_df$pct_lwr, na.rm = TRUE))
@@ -190,7 +190,7 @@ pw0 <- as.data.frame(pairs(emm0, adjust = "tukey")) %>%
     p_lab = ifelse(p.value < 0.001, "<0.001", sprintf("%.3f", p.value))
   )
 
-write.csv(pw0, "Data_Figure3E_2.csv")
+write.csv(pw0, "Figure3e_model_pairwise_contrasts_from_script.csv")
 # =========================
 # Public-release note
 # =========================
@@ -377,7 +377,7 @@ p_forest_continent <- ggplot(emm_df, aes(x = continent, y = pct, color = env_gro
 print(p_forest_continent)
 
 ggsave(
-  "region_speical_N_forest_by_continent_env_tukeyP.pdf",
+  "Figure3e_lnrr_regionalized_model_estimates.pdf",
   p_forest_continent,
   width = 110, height = 55, units = "mm", dpi = 300
 )
@@ -407,7 +407,7 @@ wilcox_res <- d_trim %>%
   ungroup()
 
 print(wilcox_res)
-write.csv(wilcox_res, "Data_figure3F.csv")
+write.csv(wilcox_res, "Figure3f_yield_wilcoxon_tests.csv")
 # --- letters (choose BH or Holm) ---
 pick_p <- "p_adj_bh"
 
@@ -486,7 +486,7 @@ p_box_letters <- ggplot(d_trim, aes(x = continent, y = mean_t, fill = env_group)
 
 print(p_box_letters)
 
-ggsave("region_speical_N_box_mean_t_by_continent_env_wilcox_letters.pdf", p_box_letters,
+ggsave("Figure3f_fertilized_yield_regionalized_boxplot.pdf", p_box_letters,
        width = 110, height = 55, units = "mm", dpi = 300)
 # =========================================================
 # Summary stats for boxplot: continent × env_group
@@ -513,7 +513,7 @@ box_stats <- d_trim %>%
 
 print(box_stats)
 
-write.csv(box_stats, "Figure3F_Global_boxplot_stats_continent_env_mean_t.csv", row.names = FALSE)
+write.csv(box_stats, "Figure3f_fertilized_yield_summary_stats_from_script.csv", row.names = FALSE)
 
 
 ################# Public-release note
@@ -612,7 +612,7 @@ p_box_letters <- ggplot(d_trim, aes(x = continent, y = N_rate, fill = env_group)
   scale_y_continuous(breaks = seq(0, 600, by = 125)) 
 print(p_box_letters)
 
-ggsave("region_speical_N_box_N_rate_by_continent_env_wilcox_letters.pdf", p_box_letters,
+ggsave("Supplementary_Figure3b_n_rate_regionalized_dataset_boxplot.pdf", p_box_letters,
        width = 110, height = 55, units = "mm", dpi = 300)
 # =========================================================
 # Summary stats for boxplot: continent × env_group
@@ -639,7 +639,7 @@ box_stats <- d_trim %>%
 
 print(box_stats)
 
-write.csv(box_stats, "Supplement_Figure3-1C.csv", row.names = FALSE)
+write.csv(box_stats, "Supplementary_Figure3b_n_rate_regionalized_dataset_summary_stats_from_script.csv", row.names = FALSE)
 
 
 
@@ -677,7 +677,7 @@ wilcox_res <- d_trim %>%
 
 print(wilcox_res)
 
-write.csv(wilcox_res, "Supplement_Figure3-1D-1.csv")
+write.csv(wilcox_res, "Supplementary_Figure3d_zero_n_yield_regionalized_dataset_wilcoxon_tests_from_script.csv")
 
 # --- letters (choose BH or Holm) ---
 pick_p <- "p_adj_bh"
@@ -757,7 +757,7 @@ p_box_letters <- ggplot(d_trim, aes(x = continent, y = mean_c, fill = env_group)
 
 print(p_box_letters)
 
-ggsave("Global_N0_box_mean_c_by_continent_env_wilcox_letters.pdf", p_box_letters,
+ggsave("Supplementary_Figure3d_zero_n_yield_regionalized_dataset_boxplot.pdf", p_box_letters,
        width = 110, height = 55, units = "mm", dpi = 300)
 
 # =========================================================
@@ -785,7 +785,7 @@ box_stats <- d_trim %>%
 
 print(box_stats)
 
-write.csv(box_stats, "Supplement_Figure3-1D.csv", row.names = FALSE)
+write.csv(box_stats, "Supplementary_Figure3d_zero_n_yield_regionalized_dataset_summary_stats_from_script.csv", row.names = FALSE)
 
 
 
@@ -794,7 +794,7 @@ write.csv(box_stats, "Supplement_Figure3-1D.csv", row.names = FALSE)
 d_trim <- d_trim %>%
   dplyr::filter(country %in% c("China", "USA"))
 
-write.csv(d_trim, "China$USA_data_set.csv")
+write.csv(d_trim, "Supplementary_Figure5_data_set.csv")
 # cell counts (for labels)
 count_cell <- d_trim %>%
   group_by(country, env_group) %>%
@@ -842,7 +842,7 @@ emm_df <- as.data.frame(emm0) %>%
   mutate(
     n_lab = paste0("n=", k)
   )
-write.csv(emm_df, "Supplement Figure 3-3_A-1.csv")
+write.csv(emm_df, "Supplementary_Figure5a_lnrr_china_usa_model_estimates_from_script.csv")
 # Public-release note
 n_offset <- 0.06 * (max(emm_df$pct_upr, na.rm = TRUE) - min(emm_df$pct_lwr, na.rm = TRUE))
 emm_df <- emm_df %>% mutate(y_n = pct_lwr - n_offset)
@@ -856,7 +856,7 @@ pw0 <- as.data.frame(pairs(emm0, adjust = "tukey")) %>%
     g2 = factor(g2, levels = env_levels),
     p_lab = ifelse(p.value < 0.001, "<0.001", sprintf("%.3f", p.value))
   )
-write.csv(pw0, "Supplement Figure 3-3_A-2.csv")
+write.csv(pw0, "Supplementary_Figure5a_lnrr_china_usa_model_pairwise_contrasts_from_script.csv")
 # =========================
 # Public-release note
 # =========================
@@ -1043,7 +1043,7 @@ p_forest_country <- ggplot(emm_df, aes(x = country, y = pct, color = env_group))
 print(p_forest_country)
 
 ggsave(
-  "China_USA_speical_N_forest.pdf",
+  "Supplementary_Figure5a_lnrr_china_usa_model_estimates.pdf",
   p_forest_country,
   width = 55, height = 55, units = "mm", dpi = 300
 )
@@ -1071,7 +1071,7 @@ wilcox_res <- d_trim %>%
   ungroup()
 
 print(wilcox_res)
-write.csv(wilcox_res, "Supplement Figure 3-3D-1.csv")
+write.csv(wilcox_res, "Supplementary_Figure5d_zero_n_yield_wilcoxon_tests.csv")
 # --- letters (choose BH or Holm) ---
 pick_p <- "p_adj_bh"
 
@@ -1150,7 +1150,7 @@ p_box_letters <- ggplot(d_trim, aes(x = country, y = mean_c, fill = env_group)) 
 
 print(p_box_letters)
 
-ggsave("China_USA_speical_N_box_mean_c_by_country_env_wilcox_letters.pdf", p_box_letters,
+ggsave("Supplementary_Figure5d_zero_n_yield_china_usa_boxplot.pdf", p_box_letters,
        width = 55, height = 55, units = "mm", dpi = 300)
 
 box_stats <- d_trim %>%
@@ -1175,4 +1175,4 @@ box_stats <- d_trim %>%
 
 print(box_stats)
 
-write.csv(box_stats, "Supplement Figure 3-3D-2.csv", row.names = FALSE)
+write.csv(box_stats, "Supplementary_Figure5d_zero_n_yield_summary_stats_from_script.csv", row.names = FALSE)

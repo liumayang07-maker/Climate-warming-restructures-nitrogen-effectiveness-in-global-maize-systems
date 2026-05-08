@@ -104,5 +104,5 @@ region_year_nrate <- df %>%
   )
 
 # Public-release note
-write.csv(region_year_nrate, "11region_year_weighted_N_rate_1990_2020.csv", row.names = FALSE)
+write.csv(region_year_nrate, "Figure3_regional_n_input_1990_2020.csv", row.names = FALSE)
 cat("[DONE] /（kg N/ha）！\n")

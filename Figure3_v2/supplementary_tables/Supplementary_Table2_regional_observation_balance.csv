@@ -1,0 +1,12 @@
+Continent,Region,Total observations,Normal,PFR,GFR
+Africa,West Africa,42,18,6,18
+Africa,East Africa,149,106,17,26
+Europe,Europe,250,72,60,118
+North America,North America (irrigated),478,62,164,252
+North America,North America (rainfed),1291,722,207,362
+Asia,North China Plain,770,131,623,16
+Asia,Northeast China,299,197,73,29
+Asia,Northwest China,599,298,170,131
+Asia,Southwest China,177,4,52,121
+Asia,South Asia,331,43,155,133
+South America,South America,186,89,63,34

@@ -1,0 +1,21 @@
+public_filename,source_data_sheet,source_data_block_label,source_data_block_occurrence,rows_written,columns_written,extraction_mode
+Figure3a_data_set.csv,Figure3,Figure3a_data set,1,110,14,table
+Figure3a_region_environment_counts.csv,Figure3,Figure3a,1,11,10,table
+Figure3b_edh_intensity_stack.csv,Figure3,Figure3b,1,77,4,table
+Figure3c_data_set.csv,Figure3,Figure3c,1,4170,25,table
+Figure3c_model_results.csv,Figure3,Figure3c,2,39,14,raw
+Figure3d_yield_wilcoxon_tests.csv,Figure3,Figure3d,1,31,10,table
+Figure3e_data_set.csv,Figure3,Figure3e,1,1601,25,table
+Figure3e_model_results.csv,Figure3,Figure3e,2,39,14,raw
+Figure3f_yield_wilcoxon_tests.csv,Figure3,Figure3f,1,31,10,table
+Supplementary_Figure3a_n_rate_all_observations.csv,Supplement Figure 3,Supplement Figure 3a,1,15,10,table
+Supplementary_Figure3b_n_rate_regionalized_dataset.csv,Supplement Figure 3,Supplement Fgiure 3b,1,31,10,table
+Supplementary_Figure3c_zero_n_yield_all_observations.csv,Supplement Figure 3,Supplement Fgiure 3c,1,15,10,table
+Supplementary_Figure3d_zero_n_yield_regionalized_dataset.csv,Supplement Figure 3,Supplement Fgiure 3d,1,31,10,table
+Supplementary_Figure4a_aen_all_observations_model_results.csv,Supplement Figure 4,Supplement Fgiure 4a,1,39,11,raw
+Supplementary_Figure4b_aen_regionalized_dataset_model_results.csv,Supplement Figure 4,Supplement Fgiure 4b,1,39,11,raw
+Supplementary_Figure5_data_set.csv,Supplement Figure 5,Supplement Fgiure 5_data_set,1,1164,21,table
+Supplementary_Figure5a_lnrr_china_usa_model_results.csv,Supplement Figure 5,Supplement Fgiure 5a,1,21,14,raw
+Supplementary_Figure5b_aen_china_usa_model_results.csv,Supplement Figure 5,Supplement Fgiure 5b,1,21,14,raw
+Supplementary_Figure5c_fertilized_yield_wilcoxon_tests.csv,Supplement Figure 5,Supplement Fgiure 5c,1,13,10,table
+Supplementary_Figure5d_zero_n_yield_wilcoxon_tests.csv,Supplement Figure 5,Supplement Fgiure 5d,1,13,10,table

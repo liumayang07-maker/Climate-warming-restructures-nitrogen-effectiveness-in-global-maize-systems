@@ -1,0 +1,8 @@
+Model,Equation,Description
+M0,,"indicates lnRR or AEN for observation j in experiment i within publication k,  is the random effect of publication, is the random effect of experiment (site-year) within publication, andis the residual error"
+M1,,heat-exposure environment group
+M2,,continuous nitrogen input rate ()
+M3,,nitrogen-rate subgroup clusters
+M4,,"denotes continent,  is the natural spline term for N input rate to accommodate the non-linear response patterns observed across N gradients."
+M5,,Plant density clusters ()
+M6,,Nitrogen management strategy ()

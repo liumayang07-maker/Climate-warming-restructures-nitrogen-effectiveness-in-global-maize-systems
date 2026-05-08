@@ -1,0 +1,12 @@
+Continent,Region,Mean conventional N input in the 2010s (kg N ha-1),Conventional N input window (kg N ha-1),No. of observations retained
+Africa,West Africa,30.2,"(0, 80]",19
+Africa,East Africa,117.9,"[68, 168]",73
+Europe,Europe,324.9,"[275, 375]",41
+North America,North America (irrigated),239.1,"[189, 289]",84
+North America,North America (rainfed),202.0,"[152, 252]",465
+Asia,North China Plain,211.6,"[162, 262]",374
+Asia,Northeast China,170.4,"[120, 220]",136
+Asia,Northwest China,182.5,"[133, 233]",240
+Asia,Southwest China,154.4,"[104, 204]",59
+Asia,South Asia,104.2,"[54, 154]",214
+South America,South America,123.8,"[74, 174]",78
