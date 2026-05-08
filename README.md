@@ -219,15 +219,15 @@ The `Extended Data Figure 2` sheet in the manuscript Source Data workbook contai
 
 | Public file | Source Data sheet | Source Data block label | Rows x cols | Source |
 | --- | --- | --- | --- | --- |
-| `Extended_Data_Figure2_data_set.csv` | `Extended Data Figure 2` | `Figure 5 Selected Data set` | 1152 x 21 | Source Data block |
-| `Extended_Data_Figure2a_lnrr_china_usa_model_results.csv` | `Extended Data Figure 2` | `Figure 5a_China+USA` | 24 x 18 | Source Data block |
-| `Extended_Data_Figure2b_aen_china_usa_model_results.csv` | `Extended Data Figure 2` | `Figure 5b_China+USA` | 24 x 15 | Source Data block |
-| `Extended_Data_Figure2c_lnrr_china_model_results.csv` | `Extended Data Figure 2` | `Figure 5c_China` | 24 x 18 | Source Data block |
-| `Extended_Data_Figure2d_aen_china_model_results.csv` | `Extended Data Figure 2` | `Figure 5d_China` | 24 x 15 | Source Data block |
-| `Extended_Data_Figure2e_lnrr_usa_model_results.csv` | `Extended Data Figure 2` | `Figure 5e_USA` | 18 x 18 | Source Data block |
-| `Extended_Data_Figure2f_aen_usa_model_results.csv` | `Extended Data Figure 2` | `Figure 5f_USA` | 18 x 15 | Source Data block |
-| `Extended_Data_Figure2g_yield_china_usa_wilcoxon_tests.csv` | `Extended Data Figure 2` | `Figure 5g_China+USA` | 32 x 11 | Source Data block |
-| `Extended_Data_Figure2h_yield_china_wilcoxon_tests.csv` | `Extended Data Figure 2` | `Figure5h_China` | 32 x 12 | Source Data block |
+| `Extended_Data_Figure2_data_set.csv` | `Extended Data Figure 2` | `Figure 5 Selected Data set` | 1152 x 20 | Source Data block |
+| `Extended_Data_Figure2a_lnrr_china_usa_model_results.csv` | `Extended Data Figure 2` | `Figure 5a_China+USA` | 24 x 17 | Source Data block |
+| `Extended_Data_Figure2b_aen_china_usa_model_results.csv` | `Extended Data Figure 2` | `Figure 5b_China+USA` | 24 x 14 | Source Data block |
+| `Extended_Data_Figure2c_lnrr_china_model_results.csv` | `Extended Data Figure 2` | `Figure 5c_China` | 24 x 17 | Source Data block |
+| `Extended_Data_Figure2d_aen_china_model_results.csv` | `Extended Data Figure 2` | `Figure 5d_China` | 24 x 14 | Source Data block |
+| `Extended_Data_Figure2e_lnrr_usa_model_results.csv` | `Extended Data Figure 2` | `Figure 5e_USA` | 18 x 17 | Source Data block |
+| `Extended_Data_Figure2f_aen_usa_model_results.csv` | `Extended Data Figure 2` | `Figure 5f_USA` | 18 x 14 | Source Data block |
+| `Extended_Data_Figure2g_yield_china_usa_wilcoxon_tests.csv` | `Extended Data Figure 2` | `Figure 5g_China+USA` | 32 x 9 | Source Data block |
+| `Extended_Data_Figure2h_yield_china_wilcoxon_tests.csv` | `Extended Data Figure 2` | `Figure5h_China` | 32 x 11 | Source Data block |
 | `Extended_Data_Figure2i_yield_usa_wilcoxon_tests.csv` | `Extended Data Figure 2` | `Figure5i_USA` | 11 x 11 | Source Data block |
 
 Important Extended Data Figure 2 boundaries:
