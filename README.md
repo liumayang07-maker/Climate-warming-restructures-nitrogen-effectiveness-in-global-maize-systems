@@ -39,6 +39,28 @@ The full `meta_data_v2.csv` is not included in this public-release staging repos
 
 ERA5 hourly files are not included in GitHub. The expected local paths are documented in `Figure1_v2/external_data/README.md`; they can be regenerated from `coords.csv` with `download_era5_by_gp_year.py` and `convert_utc_to_local_and_standardize_units.R` after configuring Copernicus CDS credentials outside this repository.
 
+### Figure 1 reproducibility and Source Data notes
+
+The manuscript Source Data workbook contains a `Figure 1` sheet with the final plotted or panel-ready data for Figure 1. The sheet is organized as separate side-by-side blocks:
+
+- `Figure 1a_Data set`: site coordinates and point counts for the manually prepared site-distribution map.
+- `Figure 1b`: summary statistics for the overall nitrogen response distribution.
+- `Figure 1c_Data set`: EDH-by-relative-thermal-progress data corresponding to `Figure1_v2/output_data/env_EDH_by_relGDD_100bins.csv`.
+- `Figure 1d_Data set`: cluster-level binned EDH curve summaries derived from `plot_edh_heatmap_and_trends.R`.
+- `Figure 1f`: environment-group summary statistics.
+
+The public repository supports Figure 1 review in two complementary ways:
+
+- Numerical verification: reviewers can compare the `Figure 1` sheet in the manuscript Source Data file against the public CSV files. In particular, `Figure 1c_Data set` matches the columns and rows of the public `env_EDH_by_relGDD_100bins.csv`, except that Excel may display date columns as date values while the CSV stores them as ISO-style text.
+- Scripted reproduction: the public scripts can regenerate the scripted Figure 1 outputs from the public inputs that are included here. The histogram script uses `figure1_lnrr_histogram_input.csv`, a minimal row-level file containing only `lnRR` and `Env_Type`, rather than the full project-level `meta_data_v2.csv`.
+
+Important boundaries:
+
+- The complete `meta_data_v2.csv` is not included because it is the curated project data set. Only the minimum row-level information needed for the Figure 1 histogram is included.
+- Raw hourly ERA5 files and converted local-hour ERA5 files are not bundled in GitHub. They can be regenerated from `coords.csv` using the CDS download and UTC-to-local conversion scripts, or provided later through an external archive if required.
+- Figure 1A map layout was prepared manually in ArcGIS. The public materials provide the plotted coordinate/count data, but not an ArcGIS project file or a fully scripted map workflow.
+- The public repository is intended to support reviewer inspection and reproducibility of the scripted Figure 1 panels, while preserving the non-public full curated data set and avoiding large regenerated ERA5 files in Git history.
+
 ### Figure 2
 
 - `Figure2_v2/scripts/lnrr_unweighted_mixed_effects.R`
