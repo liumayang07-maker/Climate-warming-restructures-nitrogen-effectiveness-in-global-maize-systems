@@ -1,5 +1,7 @@
 # Climate warming restructures nitrogen effectiveness in global maize systems
 
+[中文说明](README.zh-CN.md)
+
 This repository provides code and figure-level data exports for the manuscript **Climate warming restructures nitrogen effectiveness in global maize systems**.
 
 The study combines paired maize nitrogen-response observations from the literature with hourly ERA5 climate data to evaluate how phenology-defined heat exposure changes nitrogen effectiveness. Site-years are classified into normal, pre-flowering risk (PFR), and grain-filling risk (GFR) regimes, and the analyses quantify how these heat-risk regimes alter yield response, agronomic nitrogen efficiency, regional response patterns, and candidate management options.
