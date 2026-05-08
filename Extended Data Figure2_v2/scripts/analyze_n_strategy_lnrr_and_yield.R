@@ -24,7 +24,7 @@ output_dir <- file.path(root_dir, "output_data")
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 setwd(output_dir)
 
-dat <- read.csv(file.path(input_dir, "meta_data_v2.csv"), stringsAsFactors = FALSE)
+dat <- read.csv(file.path(input_dir, "Extended_Data_Figure2_n_strategy_model_input.csv"), stringsAsFactors = FALSE)
 
 # ---- column names ----
 col_lnRR       <- "lnRR"
