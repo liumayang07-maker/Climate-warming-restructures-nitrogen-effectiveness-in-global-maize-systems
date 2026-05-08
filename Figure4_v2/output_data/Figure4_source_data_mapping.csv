@@ -1,0 +1,4 @@
+public_file,source_data_sheet,source_data_block_label,rows,columns,source
+Figure4_data_set.csv,Figure4,Figure4_Data set,104,11,Source Data block
+Figure4c_games_howell_mean_differences.csv,Figure4,Figure4c,49,8,Source Data block
+Figure4e_games_howell_mean_differences.csv,Figure4,Figure4e,49,8,Source Data block

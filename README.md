@@ -6,7 +6,7 @@ This repository is a private staging area for reviewer- and publication-ready pu
 
 This staging version contains the code scripts from the `_v2` figure-analysis directories. These scripts cover the analytical workflow described in the manuscript `Data and code availability` and `Statistical analysis` sections, including climate-data matching, thermal-time reconstruction, EDH/GDD calculation, effect-size analysis, mixed-effects modelling, subgroup analyses, statistical testing, and most scripted figure generation.
 
-This staging version now includes the Figure 1 public input and derived output tables, the Figure 2 main-panel model input and numerical outputs, the Figure 3 regionalized source-data extracts and supplementary-table CSV files, Extended Data Figure 1 with Supplementary Table 4, and the Extended Data Figure 2 nitrogen-strategy package. The complete project-level `meta_data_v2.csv` is not included; figure workflows use minimum public input tables instead.
+This staging version now includes the Figure 1 public input and derived output tables, the Figure 2 main-panel model input and numerical outputs, the Figure 3 regionalized source-data extracts and supplementary-table CSV files, the Figure 4 adaptive-strategy package, Extended Data Figure 1 with Supplementary Table 4, and the Extended Data Figure 2 nitrogen-strategy package. The complete project-level `meta_data_v2.csv` is not included; figure workflows use minimum public input tables instead.
 
 ## Statistical workflow covered by the scripts
 
@@ -146,6 +146,32 @@ Important Figure 3 boundaries:
 ### Figure 4
 
 - `Figure4_v2/scripts/compare_adaptation_strategies_yield.R`
+
+Public Figure 4 inputs currently included:
+
+- `Figure4_v2/input_data/adaptation_strategy_dataset.csv`
+
+Public Figure 4 Source Data extracts and script outputs currently included:
+
+- `Figure4_v2/output_data/Figure4_data_set.csv`
+- `Figure4_v2/output_data/Figure4c_games_howell_mean_differences.csv`
+- `Figure4_v2/output_data/Figure4e_games_howell_mean_differences.csv`
+- `Figure4_v2/output_data/Figure4*_from_script.csv`
+
+The `Figure4` sheet in the manuscript Source Data workbook contains final panel-ready data for Figure 4. The public package keeps the exact Source Data CSV exports for the data set and Games-Howell mean-difference panels, plus script-generated Dunn-test, letter and summary CSVs for the distribution panels. Non-scripted figure assets and Origin files are not included.
+
+#### Figure 4 Source Data mapping
+
+| Public file | Source Data sheet | Source Data block label | Rows x cols | Source |
+| --- | --- | --- | --- | --- |
+| `Figure4_data_set.csv` | `Figure4` | `Figure4_Data set` | 104 x 11 | Source Data block |
+| `Figure4c_games_howell_mean_differences.csv` | `Figure4` | `Figure4c` | 49 x 8 | Source Data block |
+| `Figure4e_games_howell_mean_differences.csv` | `Figure4` | `Figure4e` | 49 x 8 | Source Data block |
+
+Important Figure 4 boundaries:
+
+- Figure image files and editable design files (`*.pdf`, `*.ai`, `*.jpg`, `*.svg`, `*.opju`) are not included at this stage.
+- `Figure4_v2/input_data/source_table.xlsx` is not included because the public R script only requires `adaptation_strategy_dataset.csv`, and final panel data are provided as CSV extracts from the manuscript Source Data workbook.
 
 ### Extended Data Figure 1
 

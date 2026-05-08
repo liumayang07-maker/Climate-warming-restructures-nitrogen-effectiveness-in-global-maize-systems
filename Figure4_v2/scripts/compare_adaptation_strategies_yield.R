@@ -27,7 +27,8 @@ plot_strategy_distribution <- function(
   keep_cols,
   reference_group,
   fill_cols,
-  out_prefix,
+  distribution_prefix,
+  mean_difference_file,
   pdf_name,
   n_y,
   letter_y,
@@ -44,7 +45,7 @@ plot_strategy_distribution <- function(
     filter(is.finite(value))
 
   gh <- d_long %>% games_howell_test(value ~ group)
-  write.csv(gh, file.path(output_dir, paste0(out_prefix, "_mean_difference.csv")), row.names = FALSE)
+  write.csv(gh, file.path(output_dir, mean_difference_file), row.names = FALSE)
 
   gh_sig <- gh %>%
     filter(group1 == reference_group) %>%
@@ -54,7 +55,7 @@ plot_strategy_distribution <- function(
     add_xy_position(x = "group", fun = "max", step.increase = 0.8)
 
   dunn <- d_long %>% dunn_test(value ~ group, p.adjust.method = "BH")
-  write.csv(dunn, file.path(output_dir, paste0(out_prefix, "_Dunn_BH.csv")), row.names = FALSE)
+  write.csv(dunn, file.path(output_dir, paste0(distribution_prefix, "_dunn_bh_tests_from_script.csv")), row.names = FALSE)
 
   p_named <- dunn$p.adj
   names(p_named) <- paste(dunn$group1, dunn$group2, sep = "-")
@@ -64,7 +65,7 @@ plot_strategy_distribution <- function(
     group = factor(names(letters), levels = keep_cols),
     letter = unname(letters)
   )
-  write.csv(letters_df, file.path(output_dir, paste0(out_prefix, "_letters_df.csv")), row.names = FALSE)
+  write.csv(letters_df, file.path(output_dir, paste0(distribution_prefix, "_dunn_bh_letters_from_script.csv")), row.names = FALSE)
 
   letter_pos <- d_long %>%
     group_by(group) %>%
@@ -91,7 +92,7 @@ plot_strategy_distribution <- function(
       ymin = mean - sd,
       ymax = mean + sd
     )
-  write.csv(mean_sd_df, file.path(output_dir, paste0(out_prefix, "_mean_sd.csv")), row.names = FALSE)
+  write.csv(mean_sd_df, file.path(output_dir, paste0(distribution_prefix, "_yield_summary_from_script.csv")), row.names = FALSE)
 
   p <- ggplot(d_long, aes(x = group, y = value, fill = group)) +
     geom_violin(trim = FALSE, alpha = 0.50, color = "grey15", linewidth = 0.25) +
@@ -161,7 +162,6 @@ plot_strategy_distribution <- function(
     coord_cartesian(ylim = ylim_range, clip = "off") +
     scale_y_continuous(breaks = y_breaks)
 
-  print(p)
   ggsave(file.path(output_dir, pdf_name), p, width = 113, height = 64, units = "mm", dpi = 300)
 }
 
@@ -177,8 +177,9 @@ plot_strategy_distribution(
     WAP2_PFR = "#F2C666",
     WAP2P_PFR = "#989568"
   ),
-  out_prefix = "Figure4a",
-  pdf_name = "Figure4_starsDelta_letters_n_fill.pdf",
+  distribution_prefix = "Figure4b",
+  mean_difference_file = "Figure4c_games_howell_mean_differences_from_script.csv",
+  pdf_name = "Figure4b_pfr_yield_distribution.pdf",
   n_y = 0,
   letter_y = 2,
   ylim_range = c(0, 28),
@@ -197,8 +198,9 @@ plot_strategy_distribution(
     WAP2_GFR = "#F2C666",
     WAP2P_GFR = "#989568"
   ),
-  out_prefix = "Figure4b",
-  pdf_name = "Figure4_GFR_starsDelta_letters_n_fill.pdf",
+  distribution_prefix = "Figure4d",
+  mean_difference_file = "Figure4e_games_howell_mean_differences_from_script.csv",
+  pdf_name = "Figure4d_gfr_yield_distribution.pdf",
   n_y = -3.8,
   letter_y = -2,
   ylim_range = c(-4, 32),
