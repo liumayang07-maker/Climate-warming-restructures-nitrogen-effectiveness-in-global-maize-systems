@@ -1,0 +1,23 @@
+# Local environments and credentials
+.env
+.venv/
+venv/
+.Rhistory
+.RData
+.Rproj.user/
+.cdsapirc
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+~$*
+*.tmp
+
+# Large/private manuscript artifacts: add deliberately after screening only
+*.doc
+*.docx
+*.pdf
+*.xlsx
+*.xls
+*.zip
+*.rar
