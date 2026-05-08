@@ -2,6 +2,8 @@
 .env
 .venv/
 venv/
+__pycache__/
+*.pyc
 .Rhistory
 .RData
 .Rproj.user/
@@ -21,3 +23,16 @@ Thumbs.db
 *.xls
 *.zip
 *.rar
+*.ai
+*.jpg
+*.jpeg
+*.png
+*.svg
+*.opju
+*.RData
+*.rds
+meta_data_v2*.csv
+region_meta_data_v2*.csv
+meta_data_v2_filled_Data_year_duration.csv
+source_table.xlsx
+Source data.xlsx

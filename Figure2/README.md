@@ -6,7 +6,7 @@ This directory is the public-release package for the main `Figure 2` mixed-effec
 
 Figure 2 evaluates nitrogen-response effect sizes and agronomic efficiency across environmental contexts and nitrogen-rate clusters. This package covers the main Figure 2 `lnRR` and `AEN` analyses.
 
-The long-term supplementary script is retained for traceability, but its input and output files are not included in this main Figure 2 package.
+The long-term supplementary script is retained for traceability, but its complete input table and output files are not included in this main Figure 2 package. It should be treated as a supplementary-workflow script unless the long-term experiment input package is released separately.
 
 ## Script Inventory
 
@@ -52,7 +52,7 @@ The manuscript Source Data workbook contains a `Figure 2` sheet with final panel
 ## Exclusions
 
 - complete `meta_data_v2.csv`
-- `output_data/year_ge5/` and long-term supplementary outputs
+- `meta_data_v2_filled_Data_year_duration.csv`, `output_data/year_ge5/`, and long-term supplementary outputs
 - rendered figure files and editable figure layouts
 - manuscript workbooks or draft manuscript files
 

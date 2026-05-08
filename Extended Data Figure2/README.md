@@ -28,7 +28,7 @@ The full `meta_data_v2.csv` is not included. The public input keeps only China/U
 
 ## Packaged Output Data
 
-`output_data/` contains the canonical panel-linked CSV files exported from `稿件/Source data.xlsx` sheet `Extended Data Figure 2`:
+`output_data/` contains the canonical panel-linked CSV files exported from the manuscript Source Data workbook, sheet `Extended Data Figure 2`:
 
 - `Extended_Data_Figure2_data_set.csv`
 - `Extended_Data_Figure2a_lnrr_china_usa_model_results.csv`
