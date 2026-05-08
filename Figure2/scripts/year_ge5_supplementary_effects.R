@@ -19,7 +19,7 @@ script_dir <- if (length(script_arg) > 0) {
 
 root_dir <- normalizePath(file.path(script_dir, "..", ".."), winslash = "/", mustWork = FALSE)
 input_file <- file.path(root_dir, "meta_data_v2_filled_Data_year_duration.csv")
-out_dir <- file.path(root_dir, "Figure2_v2", "output_data", "year_ge5")
+out_dir <- file.path(root_dir, "Figure2", "output_data", "year_ge5")
 if (!dir.exists(out_dir)) dir.create(out_dir, recursive = TRUE)
 
 dat <- read.csv(input_file, stringsAsFactors = FALSE, check.names = FALSE)

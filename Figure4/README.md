@@ -1,4 +1,4 @@
-# Figure4_v2
+# Figure4
 
 This directory is the public-release package for the current `Figure 4` workflow.
 
