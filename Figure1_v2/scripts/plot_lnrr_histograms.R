@@ -15,7 +15,7 @@ input_dir <- file.path(root_dir, "input_data")
 figure_dir <- file.path(root_dir, "figures")
 dir.create(figure_dir, recursive = TRUE, showWarnings = FALSE)
 
-meta_path <- file.path(input_dir, "meta_data_v2.csv")
+meta_path <- file.path(input_dir, "figure1_lnrr_histogram_input.csv")
 df <- read.csv(meta_path, stringsAsFactors = FALSE)
 
 x <- df$lnRR

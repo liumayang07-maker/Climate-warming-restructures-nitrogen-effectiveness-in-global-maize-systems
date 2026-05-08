@@ -6,7 +6,7 @@ This repository is a private staging area for reviewer- and publication-ready pu
 
 This staging version contains the code scripts from the `_v2` figure-analysis directories. These scripts cover the analytical workflow described in the manuscript `Data and code availability` and `Statistical analysis` sections, including climate-data matching, thermal-time reconstruction, EDH/GDD calculation, effect-size analysis, mixed-effects modelling, subgroup analyses, statistical testing, and most scripted figure generation.
 
-The source data files, supplementary tables, figure assets, manuscript files, and reviewer-facing release notes have not yet been added to this repository.
+This staging version now includes the Figure 1 public input and derived output tables needed for the scripted Figure 1 workflows. The complete project-level `meta_data_v2.csv` is not included; the Figure 1 histogram workflow uses a minimal two-column table instead.
 
 ## Statistical workflow covered by the scripts
 
@@ -27,6 +27,17 @@ The site-distribution map in Figure 1A was prepared manually in ArcGIS, and the 
 - `Figure1_v2/scripts/plot_edh_heatmap_and_trends.R`
 - `Figure1_v2/scripts/plot_lnrr_histograms.R`
 - `Figure1_v2/scripts/plot_pre_r1_gdd_ratio_boxplot.R`
+
+Public Figure 1 inputs and derived tables currently included:
+
+- `Figure1_v2/input_data/coords.csv`
+- `Figure1_v2/input_data/figure1_lnrr_histogram_input.csv`
+- `Figure1_v2/output_data/env_EDH_by_relGDD_100bins.csv`
+- `Figure1_v2/output_data/env_GDD_EDH_results_from_local.csv`
+
+The full `meta_data_v2.csv` is not included in this public-release staging repository. `figure1_lnrr_histogram_input.csv` keeps only `lnRR` and `Env_Type`, which are the columns required by `plot_lnrr_histograms.R`.
+
+ERA5 hourly files are not included in GitHub. The expected local paths are documented in `Figure1_v2/external_data/README.md`; they can be regenerated from `coords.csv` with `download_era5_by_gp_year.py` and `convert_utc_to_local_and_standardize_units.R` after configuring Copernicus CDS credentials outside this repository.
 
 ### Figure 2
 
@@ -68,11 +79,11 @@ The site-distribution map in Figure 1A was prepared manually in ArcGIS, and the 
 
 ## Not yet included
 
-- Source Data file for Figure 1-4, Extended Data Figure 1-2 and Supplementary Figure 2-5
+- Source Data file for Figure 2-4, Extended Data Figure 1-2 and Supplementary Figure 2-5
 - Supplementary Tables 1-4
 - Final figure files and editable figure layouts
 - Draft manuscript, cover letter and internal review files
-- External raw ERA5 files and local credentials for Copernicus CDS access
+- External raw/local-hour ERA5 files and local credentials for Copernicus CDS access
 
 ## Excluded from public release
 
