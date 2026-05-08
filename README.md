@@ -31,6 +31,8 @@ Mixed-effects models were fitted with `lme` from `nlme`. Estimated marginal mean
 
 The full project-level `meta_data_v2.csv` is not included. Instead, this repository provides figure-specific minimum input tables containing only the columns needed to rerun or audit the public scripts.
 
+The complete manuscript Source Data workbook is provided separately with the manuscript. This repository provides figure-specific CSV exports and scripts for reviewer inspection and reproducibility.
+
 Large ERA5 hourly files are not stored in GitHub. They can be regenerated from the public coordinate table and the ERA5 download/conversion scripts after configuring Copernicus CDS credentials outside this repository. If no-download reproduction is required later, these climate files should be deposited in an external archive such as Zenodo, figshare, a journal data package, or Git LFS after screening.
 
 ## Exclusions
