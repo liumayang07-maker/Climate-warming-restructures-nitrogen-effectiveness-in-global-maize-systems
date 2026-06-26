@@ -19,7 +19,7 @@
 
 ## 数据说明
 
-完整的 manuscript Source Data workbook 随论文单独提供。本仓库提供按图拆分的 CSV 导出文件和分析脚本，便于按图核查和复现主要数值结果。
+完整的 manuscript Source Data workbook 已作为 `Source data.xlsx` 放在仓库根目录。本仓库同时提供按图拆分的 CSV 导出文件和分析脚本，便于按图核查和复现主要数值结果。
 
 完整的项目级整理数据表 `meta_data_v2.csv` 不包含在本仓库中。仓库中只提供各图脚本运行所需的最小输入表。
 

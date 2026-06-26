@@ -21,7 +21,7 @@ The repository is organized by manuscript figure. Each figure directory contains
 
 ## Data Availability
 
-The complete manuscript Source Data workbook is provided separately with the manuscript. This repository provides figure-specific CSV exports and analysis scripts so that the numerical results can be inspected and reproduced at the figure level.
+The complete manuscript Source Data workbook is provided at the repository root as `Source data.xlsx`. This repository also provides figure-specific CSV exports and analysis scripts so that the numerical results can be inspected and reproduced at the figure level.
 
 The full project-level curated data table (`meta_data_v2.csv`) is not included. Instead, figure-specific minimum input tables are provided with only the columns needed by the public scripts.
 
