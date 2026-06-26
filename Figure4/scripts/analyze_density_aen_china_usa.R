@@ -26,7 +26,7 @@ output_dir <- file.path(root_dir, "output_data")
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 setwd(output_dir)
 
-dat <- read.csv(file.path(input_dir, "Extended_Data_Figure1_density_model_input.csv"), stringsAsFactors = FALSE)
+dat <- read.csv(file.path(input_dir, "Figure4_density_model_input.csv"), stringsAsFactors = FALSE)
 if (!"plant_density_cluster" %in% names(dat) && "plant_density_3cluster" %in% names(dat)) {
   dat$plant_density_cluster <- dat$plant_density_3cluster
 }
@@ -35,8 +35,8 @@ if (!"plant_density_3cluster" %in% names(dat) && "plant_density_cluster" %in% na
 }
 
 
-subset_countries <- c("China")
-output_prefix <- "china"
+subset_countries <- c("China", "USA")
+output_prefix <- "china_usa"
 
 out_file <- function(name) {
   file.path(output_dir, paste0(output_prefix, "_", name))

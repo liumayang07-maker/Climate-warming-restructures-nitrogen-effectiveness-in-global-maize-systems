@@ -64,7 +64,7 @@ Some original Source Data block labels contain legacy spelling such as `Fgiure`.
 - complete `region_meta_data_v2.csv`
 - raw spatial inputs used before regional aggregation
 - rendered figure files and editable figure layouts
-- `Supplementary Table 4`, which belongs to the Extended Data Figure 1 plant-density package
+- `Supplementary Table 4`, which belongs to the Figure 4 plant-density package
 
 ## Reproducibility Notes
 

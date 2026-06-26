@@ -1,4 +1,4 @@
-# Leave-one-reference sensitivity for Extended Data Figure 1 interaction contrasts.
+# Leave-one-reference sensitivity for Figure 4 interaction contrasts.
 # Purpose: test whether density-specific heat-penalty contrasts are driven by individual references.
 
 suppressPackageStartupMessages({
@@ -31,7 +31,7 @@ format_p <- function(p) {
   ifelse(is.na(p), NA_character_, ifelse(p < 0.001, "<0.001", sprintf("%.3f", p)))
 }
 
-dat <- read.csv(file.path(input_dir, "Extended_Data_Figure1_density_model_input.csv"), stringsAsFactors = FALSE)
+dat <- read.csv(file.path(input_dir, "Figure4_density_model_input.csv"), stringsAsFactors = FALSE)
 if (!"plant_density_cluster" %in% names(dat) && "plant_density_3cluster" %in% names(dat)) {
   dat$plant_density_cluster <- dat$plant_density_3cluster
 }

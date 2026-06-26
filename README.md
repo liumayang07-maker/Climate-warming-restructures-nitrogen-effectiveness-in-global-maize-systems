@@ -15,9 +15,9 @@ The repository is organized by manuscript figure. Each figure directory contains
 | `Figure1/` | ERA5/GDD/EDH processing workflow, Figure 1 histogram input, and derived thermal-exposure outputs. |
 | `Figure2/` | Main Figure 2 `lnRR` and `AEN` mixed-effects model inputs and numerical outputs. |
 | `Figure3/` | Regionalized Figure 3 analyses, Supplementary Figures 3-5 outputs, and Supplementary Tables 1-3. |
-| `Figure4/` | Adaptive-management strategy yield-comparison package for Figure 4. |
-| `Extended Data Figure1/` | Plant-density analyses for Extended Data Figure 1 and Supplementary Table 4. |
-| `Extended Data Figure2/` | Nitrogen-strategy analyses for Extended Data Figure 2. |
+| `Figure4/` | Plant-density analyses for Figure 4 and Supplementary Table 4. |
+| `Figure5/` | Nitrogen-strategy analyses for Figure 5. |
+| `Figure6/` | Adaptive-management strategy yield-comparison package for Figure 6. |
 
 ## Data Availability
 
@@ -41,10 +41,10 @@ The analytical workflow includes:
 - Wilcoxon, Dunn, and Games-Howell tests for selected non-model summaries
 - figure-level CSV export and scripted numerical checks
 
-Figure 1A was prepared in ArcGIS, and the final rendering of Figure 4C,E was completed in Origin 2025. The underlying numerical data for these panels are provided as CSV files.
+Figure 1A was prepared in ArcGIS, and the final rendering of Figure 6C,E was completed in Origin 2025. The underlying numerical data for these panels are provided as CSV files.
 
 ## Notes
 
 This repository does not include editable figure artwork, manuscript documents, local credentials, virtual environments, copyright-restricted literature files, or large generated climate files.
 
-File names follow the current manuscript figure, extended-data figure, supplementary-figure, and supplementary-table numbering. Where older Source Data block labels were retained for traceability, the relevant figure-level README documents the mapping.
+File names follow the current manuscript figure, supplementary-figure, and supplementary-table numbering. Where older Source Data block labels were retained for traceability, the relevant figure-level README documents the mapping.

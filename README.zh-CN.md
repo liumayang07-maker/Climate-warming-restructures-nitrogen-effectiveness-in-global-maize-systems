@@ -13,9 +13,9 @@
 | `Figure1/` | ERA5/GDD/EDH 处理流程、Figure 1 直方图输入和热暴露相关输出。 |
 | `Figure2/` | Figure 2 主图 `lnRR` 和 `AEN` 混合效应模型输入及数值输出。 |
 | `Figure3/` | Figure 3 区域化分析、Supplementary Figures 3-5 输出和 Supplementary Tables 1-3。 |
-| `Figure4/` | Figure 4 适应性管理策略的产量比较分析。 |
-| `Extended Data Figure1/` | Extended Data Figure 1 的种植密度分析和 Supplementary Table 4。 |
-| `Extended Data Figure2/` | Extended Data Figure 2 的氮肥管理策略分析。 |
+| `Figure4/` | Figure 4 的种植密度分析和 Supplementary Table 4。 |
+| `Figure5/` | Figure 5 的氮肥管理策略分析。 |
+| `Figure6/` | Figure 6 适应性管理策略的产量比较分析。 |
 
 ## 数据说明
 
@@ -39,10 +39,10 @@
 - Wilcoxon、Dunn 和 Games-Howell 等统计检验
 - 图表层级 CSV 导出和脚本化数值检查
 
-Figure 1A 的站点分布图在 ArcGIS 中完成，Figure 4C,E 的最终绘图在 Origin 2025 中完成；这些图对应的基础数值数据已在 CSV 文件中提供。
+Figure 1A 的站点分布图在 ArcGIS 中完成，Figure 6C,E 的最终绘图在 Origin 2025 中完成；这些图对应的基础数值数据已在 CSV 文件中提供。
 
 ## 说明
 
 本仓库不包含可编辑图件、稿件文档、本地凭据、虚拟环境、受版权限制的文献文件或大型生成气候文件。
 
-文件命名遵循当前稿件中的主图、Extended Data Figure、Supplementary Figure 和 Supplementary Table 编号。若部分 Source Data block label 沿用了旧命名，对应关系会在各图目录的 README 中说明。
+文件命名遵循当前稿件中的主图、Supplementary Figure 和 Supplementary Table 编号。若部分 Source Data block label 沿用了旧命名，对应关系会在各图目录的 README 中说明。
